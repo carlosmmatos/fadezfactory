@@ -3,21 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const reviews = [
   {
-    name: "John D.",
+    name: "Chris C.",
     rating: 5,
-    text: "Best fade in town! The attention to detail is unmatched.",
+    text: "Dustin always takes care of me and gives a consistent, excellent cut at a reasonable price. Can't ask for more. The shop looks great since the new ownership too.",
     date: "2 weeks ago"
   },
   {
-    name: "Mike R.",
+    name: "Josh S.",
     rating: 5,
-    text: "Professional service and amazing results every time.",
+    text: "Best haircut I've had in a while. I booked an appointment online and got my hair cut by Q. It was a phenomenal experience and I normally hate getting my hair cut.",
     date: "1 month ago"
   },
   {
-    name: "Chris B.",
+    name: "Leo B.",
     rating: 5,
-    text: "Great atmosphere and even better haircuts. Highly recommended!",
+    text: "My new barber is Dustin. He's fantastic, truly a master at his craft. He knew exactly how to cut my hair for the best look. You get what you pay for: experience + skill. Dustin is my barber from here on out.",
     date: "3 weeks ago"
   }
 ];
@@ -48,7 +48,7 @@ export default function Gallery() {
         {/* Gallery Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-primary">Gallery</span>
+            Our <span className="text-[#a39e87]">Gallery</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Take a look at some of our finest work. We take pride in every cut and
@@ -74,7 +74,7 @@ export default function Gallery() {
         {/* Reviews Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Customer <span className="text-primary">Reviews</span>
+            Customer <span className="text-[#a39e87]">Reviews</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our clients have to say.

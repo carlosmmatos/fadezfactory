@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 
 export default function Footer() {
@@ -51,22 +51,12 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/fadez_factory/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-primary transition-colors"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-primary transition-colors"
-              >
-                <Twitter className="w-6 h-6" />
               </a>
             </div>
           </div>

@@ -7,9 +7,9 @@ interface LogoProps extends React.HTMLAttributes<HTMLImageElement> {
 export function Logo({ className, ...props }: LogoProps) {
   return (
     <img
-      src="/assets/fade-LOGO-blanco.eps"
+      src="/assets/logo.svg"
       alt="FADEZ FACTORY"
-      className={className}
+      className={cn("h-auto", className)}
       {...props}
     />
   );

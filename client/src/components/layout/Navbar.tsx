@@ -19,11 +19,15 @@ export default function Navbar() {
     const left = (window.innerWidth - width) / 2;
     const top = (window.innerHeight - height) / 2;
 
-    window.open(
+    const popup = window.open(
       "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge",
       "BookAppointment",
-      `width=${width},height=${height},top=${top},left=${left},popup=yes`
+      `popup=yes,width=${width},height=${height},top=${top},left=${left}`
     );
+
+    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+      window.location.href = "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge";
+    }
   };
 
   return (
@@ -41,7 +45,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-primary transition-colors"
+                className="text-gray-300 hover:text-[#a39e87] transition-colors"
               >
                 {link.name}
               </a>
@@ -50,7 +54,7 @@ export default function Navbar() {
               href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
               onClick={handleBookingClick}
             >
-              <Button className="bg-primary hover:bg-primary/90 text-black">
+              <Button className="bg-[#a39e87] hover:bg-[#a39e87]/90 text-black">
                 Book Now
               </Button>
             </a>
@@ -75,7 +79,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-primary transition-colors"
+                  className="block px-3 py-2 text-gray-300 hover:text-[#a39e87] transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -90,7 +94,7 @@ export default function Navbar() {
                   }}
                   className="block w-full"
                 >
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-black">
+                  <Button className="w-full bg-[#a39e87] hover:bg-[#a39e87]/90 text-black">
                     Book Now
                   </Button>
                 </a>

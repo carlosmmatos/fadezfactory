@@ -9,11 +9,15 @@ export default function Hero() {
     const left = (window.innerWidth - width) / 2;
     const top = (window.innerHeight - height) / 2;
 
-    window.open(
+    const popup = window.open(
       "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge",
       "BookAppointment",
-      `width=${width},height=${height},top=${top},left=${left},popup=yes`
+      `popup=yes,width=${width},height=${height},top=${top},left=${left}`
     );
+
+    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+      window.location.href = "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge";
+    }
   };
 
   return (
@@ -31,9 +35,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          <span className="text-primary">Premium Cuts</span>
+          <span className="text-white">Premium Cuts</span>
           <br />
-          <span className="text-white">Exceptional Style</span>
+          <span className="text-[#a39e87]">Exceptional Style</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           Experience the art of precision grooming at FADEZ FACTORY. 
@@ -46,7 +50,7 @@ export default function Hero() {
           >
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-black text-lg"
+              className="bg-[#a39e87] hover:bg-[#a39e87]/90 text-black text-lg"
             >
               Book Appointment
             </Button>
@@ -54,7 +58,7 @@ export default function Hero() {
           <Button 
             size="lg" 
             variant="outline"
-            className="border-primary text-primary hover:bg-primary/10"
+            className="border-[#a39e87] text-[#a39e87] hover:bg-[#a39e87]/10"
             onClick={() => {
               document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
             }}

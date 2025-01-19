@@ -24,10 +24,10 @@ export default function Navbar() {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-black/90 backdrop-blur-sm" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           <div className="flex-shrink-0">
-            <a href="/" className="block">
-              <Logo className="w-32" />
+            <a href="/" className="block transition-transform hover:scale-105">
+              <Logo className="w-40 md:w-48" />
             </a>
           </div>
 

@@ -20,7 +20,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      content: "info@fadezfactory.com",
+      content: "Fadezfactory787@gmail.com",
     },
   ];
 

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { BookingDialog } from "@/components/ui/booking-dialog";
 
 export default function Hero() {
   return (
@@ -25,12 +26,14 @@ export default function Hero() {
           Where style meets sophistication in every cut.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-black text-lg"
-          >
-            Book Appointment
-          </Button>
+          <BookingDialog>
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-black text-lg"
+            >
+              Book Appointment
+            </Button>
+          </BookingDialog>
           <Button 
             size="lg" 
             variant="outline"

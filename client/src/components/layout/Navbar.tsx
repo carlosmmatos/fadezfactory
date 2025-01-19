@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
+import { BookingDialog } from "@/components/ui/booking-dialog";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -32,9 +33,11 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-black">
-              Book Now
-            </Button>
+            <BookingDialog>
+              <Button className="bg-primary hover:bg-primary/90 text-black">
+                Book Now
+              </Button>
+            </BookingDialog>
           </div>
 
           <div className="md:hidden">
@@ -63,9 +66,11 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-black">
-                  Book Now
-                </Button>
+                <BookingDialog>
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-black">
+                    Book Now
+                  </Button>
+                </BookingDialog>
               </div>
             </div>
           </div>

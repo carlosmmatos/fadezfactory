@@ -38,6 +38,9 @@ export default function Hero() {
             size="lg" 
             variant="outline"
             className="border-primary text-primary hover:bg-primary/10"
+            onClick={() => {
+              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             View Services
           </Button>

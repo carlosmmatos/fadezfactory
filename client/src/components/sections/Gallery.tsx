@@ -1,3 +1,4 @@
+typescript
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -25,19 +26,19 @@ const reviews = [
 export default function Gallery() {
   const images = [
     {
-      url: "/assets/fade-cuts/fade1.svg",
+      url: "/assets/gallery/FadeCut1.png",
       alt: "Professional fade cut with styled top"
     },
     {
-      url: "/assets/fade-cuts/fade2.svg",
+      url: "/assets/gallery/FadeCut2.jpg",
       alt: "Precision wave pattern fade cut"
     },
     {
-      url: "/assets/fade-cuts/fade3.svg",
+      url: "/assets/gallery/FadeCut3.jpg",
       alt: "Clean fade cut with textured top"
     },
     {
-      url: "/assets/fade-cuts/fade4.svg",
+      url: "/assets/gallery/FadeCut4.png",
       alt: "Sharp line up with perfect fade"
     },
   ];
@@ -60,12 +61,12 @@ export default function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="aspect-square overflow-hidden rounded-lg group bg-gray-800"
+              className="aspect-square overflow-hidden rounded-lg group"
             >
               <img
                 src={image.url}
                 alt={image.alt}
-                className="w-full h-full object-contain transform transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           ))}

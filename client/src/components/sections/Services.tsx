@@ -43,7 +43,7 @@ export default function Services() {
               className="bg-gray-900 border-gray-800 hover:border-primary transition-colors"
             >
               <CardHeader className="text-center">
-                <service.icon className="w-12 h-12 mx-auto text-primary mb-4" />
+                <service.icon className="w-12 h-12 mx-auto text-[#a39e87] mb-4" />
                 <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 <p className="text-2xl font-bold text-primary">{service.price}</p>
               </CardHeader>

@@ -48,7 +48,7 @@ export default function Gallery() {
         {/* Gallery Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-[#a39e87]">Gallery</span>
+            Our <span className="text-primary">Gallery</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Take a look at some of our finest work. We take pride in every cut and
@@ -74,7 +74,7 @@ export default function Gallery() {
         {/* Reviews Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Customer <span className="text-[#a39e87]">Reviews</span>
+            Customer <span className="text-primary">Reviews</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our clients have to say.

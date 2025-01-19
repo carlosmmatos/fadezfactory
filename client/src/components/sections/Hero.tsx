@@ -7,7 +7,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-black"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1445510861639-5651173bc5d5')",
+          backgroundImage: "url('/assets/FadezPhotoBack.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

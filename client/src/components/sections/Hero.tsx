@@ -1,25 +1,7 @@
 import { Button } from "@/components/ui/button";
-import React from 'react';
+import { BookingDialog } from "@/components/ui/booking-dialog";
 
 export default function Hero() {
-  const handleBookingClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const width = 500;
-    const height = 600;
-    const left = (window.innerWidth - width) / 2;
-    const top = (window.innerHeight - height) / 2;
-
-    const popup = window.open(
-      "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge",
-      "BookAppointment",
-      `popup=yes,width=${width},height=${height},top=${top},left=${left}`
-    );
-
-    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
-      window.location.href = "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge";
-    }
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center">
       {/* Background Image */}
@@ -44,17 +26,14 @@ export default function Hero() {
           Where style meets sophistication in every cut.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
-            onClick={handleBookingClick}
-          >
+          <BookingDialog>
             <Button 
               size="lg" 
               className="bg-[#a39e87] hover:bg-[#a39e87]/90 text-black text-lg"
             >
               Book Appointment
             </Button>
-          </a>
+          </BookingDialog>
           <Button 
             size="lg" 
             variant="outline"

@@ -66,7 +66,7 @@ export function BookingDialog({ children, className }: BookingDialogProps) {
       <DialogContent className="sm:max-w-[800px] h-[80vh]">
         <iframe
           ref={iframeRef}
-          src="https://getsquire.com/booking/brands/1ff67c92-ebf8-4a94-87a0-ab47bc022457?platform=widget&gclid=null"
+          src="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge?platform=widget&gclid=null"
           className="w-full h-full border-none"
           title="Book Appointment"
           allow="geolocation"

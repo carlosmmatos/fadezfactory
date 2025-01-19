@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
+import { BookingDialog } from "@/components/ui/booking-dialog";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -11,24 +12,6 @@ export default function Navbar() {
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
   ];
-
-  const handleBookingClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const width = 500;
-    const height = 600;
-    const left = (window.innerWidth - width) / 2;
-    const top = (window.innerHeight - height) / 2;
-
-    const popup = window.open(
-      "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge",
-      "BookAppointment",
-      `popup=yes,width=${width},height=${height},top=${top},left=${left}`
-    );
-
-    if (!popup || popup.closed || typeof popup.closed === 'undefined') {
-      window.location.href = "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge";
-    }
-  };
 
   return (
     <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
@@ -50,14 +33,11 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a
-              href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
-              onClick={handleBookingClick}
-            >
+            <BookingDialog>
               <Button className="bg-primary hover:bg-primary/90 text-black">
                 Book Now
               </Button>
-            </a>
+            </BookingDialog>
           </div>
 
           <div className="md:hidden">
@@ -86,18 +66,11 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <a
-                  href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
-                  onClick={(e) => {
-                    handleBookingClick(e);
-                    setIsOpen(false);
-                  }}
-                  className="block w-full"
-                >
+                <BookingDialog>
                   <Button className="w-full bg-primary hover:bg-primary/90 text-black">
                     Book Now
                   </Button>
-                </a>
+                </BookingDialog>
               </div>
             </div>
           </div>

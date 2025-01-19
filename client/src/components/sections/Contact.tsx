@@ -43,7 +43,7 @@ export default function Contact() {
               key={info.title}
               className="text-center p-6 bg-gray-900 rounded-lg"
             >
-              <info.icon className="w-8 h-8 mx-auto text-primary mb-4" />
+              <info.icon className="w-8 h-8 mx-auto text-[#a39e87] mb-4" />
               <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
               <p className="text-gray-400 whitespace-pre-line">{info.content}</p>
             </div>

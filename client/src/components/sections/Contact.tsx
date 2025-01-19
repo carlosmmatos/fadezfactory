@@ -10,12 +10,12 @@ export default function Contact() {
     {
       icon: Clock,
       title: "Hours",
-      content: "Mon-Sat: 9AM-8PM\nSunday: 10AM-6PM",
+      content: "Mon: 9AM-5PM\nTues-Fri: 10AM-6PM\nSat-Sun: 10AM-5PM",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "(555) 123-4567",
+      content: "(321) 305-4565",
     },
     {
       icon: Mail,

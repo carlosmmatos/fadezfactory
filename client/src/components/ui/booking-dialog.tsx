@@ -16,22 +16,36 @@ export function BookingDialog({ children, className }: BookingDialogProps) {
   useEffect(() => {
     // Function to handle messages from the iframe
     const handleMessage = (event: MessageEvent) => {
-      if (event.data === 'requestLocation') {
+      // Only accept messages from Squire's domain
+      if (!event.origin.includes('getsquire.com')) return;
+
+      if (event.data?.type === 'LOCATION_REQUEST') {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             // Send location back to iframe
-            if (iframeRef.current) {
-              iframeRef.current.contentWindow?.postMessage({
-                type: 'location',
+            if (iframeRef.current?.contentWindow) {
+              iframeRef.current.contentWindow.postMessage({
+                type: 'LOCATION_RESPONSE',
                 coords: {
                   latitude: position.coords.latitude,
                   longitude: position.coords.longitude
                 }
-              }, '*');
+              }, event.origin);
             }
           },
           (error) => {
-            console.log('Location permission denied or error:', error);
+            // Send error back to iframe
+            if (iframeRef.current?.contentWindow) {
+              iframeRef.current.contentWindow.postMessage({
+                type: 'LOCATION_ERROR',
+                error: error.message
+              }, event.origin);
+            }
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
           }
         );
       }
@@ -55,30 +69,7 @@ export function BookingDialog({ children, className }: BookingDialogProps) {
           src="https://getsquire.com/booking/brands/1ff67c92-ebf8-4a94-87a0-ab47bc022457?platform=widget&gclid=null"
           className="w-full h-full border-none"
           title="Book Appointment"
-          onLoad={() => {
-            // Inject script to handle location requests
-            if (iframeRef.current?.contentWindow) {
-              const script = `
-                // Override the geolocation API in the iframe
-                if (navigator.geolocation) {
-                  navigator.geolocation.getCurrentPosition = function(success, error) {
-                    // Request location from parent
-                    window.parent.postMessage('requestLocation', '*');
-
-                    // Listen for response
-                    window.addEventListener('message', function(event) {
-                      if (event.data?.type === 'location') {
-                        success({
-                          coords: event.data.coords
-                        });
-                      }
-                    });
-                  };
-                }
-              `;
-              iframeRef.current.contentWindow.eval(script);
-            }
-          }}
+          allow="geolocation"
         />
       </DialogContent>
     </Dialog>

@@ -25,19 +25,19 @@ const reviews = [
 export default function Gallery() {
   const images = [
     {
-      url: "/assets/FadeCut1.png",
+      url: "/assets/fade-cuts/fade1.svg",
       alt: "Professional fade cut with styled top"
     },
     {
-      url: "/assets/FadeCut2.jpg",
+      url: "/assets/fade-cuts/fade2.svg",
       alt: "Precision wave pattern fade cut"
     },
     {
-      url: "/assets/FadeCut3.jpg",
+      url: "/assets/fade-cuts/fade3.svg",
       alt: "Clean fade cut with textured top"
     },
     {
-      url: "/assets/FadeCut4.png",
+      url: "/assets/fade-cuts/fade4.svg",
       alt: "Sharp line up with perfect fade"
     },
   ];
@@ -60,12 +60,12 @@ export default function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="aspect-square overflow-hidden rounded-lg group"
+              className="aspect-square overflow-hidden rounded-lg group bg-gray-800"
             >
               <img
                 src={image.url}
                 alt={image.alt}
-                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-contain transform transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}

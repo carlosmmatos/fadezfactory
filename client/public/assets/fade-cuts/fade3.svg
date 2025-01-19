@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+     width="800" height="600" viewBox="0 0 800 600"
+     preserveAspectRatio="xMidYMid meet">
+  <title>Clean Fade with Textured Top</title>
+  <defs>
+    <linearGradient id="texture-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a3a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="texture-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10 L20 10 M10 0 L10 20" 
+            stroke="#444" stroke-width="1" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <!-- Base shape for the head -->
+  <path d="M400 50 C600 50 700 200 700 300 C700 450 500 550 400 550 C300 550 100 450 100 300 C100 200 200 50 400 50"
+        fill="url(#texture-fade)" stroke="none"/>
+  <!-- Textured top overlay -->
+  <rect x="200" y="50" width="400" height="150" 
+        fill="url(#texture-pattern)"/>
+</svg>

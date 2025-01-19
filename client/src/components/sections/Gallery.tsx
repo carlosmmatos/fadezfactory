@@ -25,20 +25,20 @@ const reviews = [
 export default function Gallery() {
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1706087467412-993607b6a390",
-      alt: "Professional haircut style 1"
+      url: "/assets/FadeCut1.png",
+      alt: "Professional fade cut with styled top"
     },
     {
-      url: "https://images.unsplash.com/photo-1706087476924-6c0ae4839556",
-      alt: "Professional haircut style 2"
+      url: "/assets/FadeCut2.jpg",
+      alt: "Precision wave pattern fade cut"
     },
     {
-      url: "https://images.unsplash.com/photo-1706087467451-5b8650301c17",
-      alt: "Professional haircut style 3"
+      url: "/assets/FadeCut3.jpg",
+      alt: "Clean fade cut with textured top"
     },
     {
-      url: "https://images.unsplash.com/photo-1464750329548-977f9793ca3e",
-      alt: "Professional haircut style 4"
+      url: "/assets/FadeCut4.png",
+      alt: "Sharp line up with perfect fade"
     },
   ];
 

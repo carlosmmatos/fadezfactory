@@ -12,6 +12,20 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
+  const handleBookingClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const width = 500;
+    const height = 600;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+
+    window.open(
+      "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge",
+      "BookAppointment",
+      `width=${width},height=${height},top=${top},left=${left},popup=yes`
+    );
+  };
+
   return (
     <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,8 +48,7 @@ export default function Navbar() {
             ))}
             <a
               href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleBookingClick}
             >
               <Button className="bg-primary hover:bg-primary/90 text-black">
                 Book Now
@@ -71,8 +84,10 @@ export default function Navbar() {
               <div className="px-3 py-2">
                 <a
                   href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    handleBookingClick(e);
+                    setIsOpen(false);
+                  }}
                   className="block w-full"
                 >
                   <Button className="w-full bg-primary hover:bg-primary/90 text-black">

@@ -1,6 +1,21 @@
 import { Button } from "@/components/ui/button";
+import React from 'react';
 
 export default function Hero() {
+  const handleBookingClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const width = 500;
+    const height = 600;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+
+    window.open(
+      "https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge",
+      "BookAppointment",
+      `width=${width},height=${height},top=${top},left=${left},popup=yes`
+    );
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center">
       {/* Background Image */}
@@ -27,8 +42,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={handleBookingClick}
           >
             <Button 
               size="lg" 

@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { BookingDialog } from "@/components/ui/booking-dialog";
 
 export default function Hero() {
   return (
@@ -26,14 +25,18 @@ export default function Hero() {
           Where style meets sophistication in every cut.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <BookingDialog>
+          <a 
+            href="https://web.getsquire.com/book/fadez-factory-on-demand-barbers-rockledge"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-black text-lg"
             >
               Book Appointment
             </Button>
-          </BookingDialog>
+          </a>
           <Button 
             size="lg" 
             variant="outline"

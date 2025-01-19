@@ -29,7 +29,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get in <span className="text-[#a39e87]">Touch</span>
+            Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Visit us today or get in touch to book your appointment. Walk-ins are
@@ -43,7 +43,7 @@ export default function Contact() {
               key={info.title}
               className="text-center p-6 bg-gray-900 rounded-lg"
             >
-              <info.icon className="w-8 h-8 mx-auto text-[#a39e87] mb-4" />
+              <info.icon className="w-8 h-8 mx-auto text-primary mb-4" />
               <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
               <p className="text-gray-400 whitespace-pre-line">{info.content}</p>
             </div>

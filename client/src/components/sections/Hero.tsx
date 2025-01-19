@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          <span className="text-[#a39e87]">Premium Cuts</span>
+          <span className="text-primary">Premium Cuts</span>
           <br />
           <span className="text-white">Exceptional Style</span>
         </h1>
@@ -29,7 +29,7 @@ export default function Hero() {
           <BookingDialog>
             <Button 
               size="lg" 
-              className="bg-[#a39e87] hover:bg-[#a39e87]/90 text-black text-lg"
+              className="bg-primary hover:bg-primary/90 text-black text-lg"
             >
               Book Appointment
             </Button>
@@ -37,7 +37,7 @@ export default function Hero() {
           <Button 
             size="lg" 
             variant="outline"
-            className="border-[#a39e87] text-[#a39e87] hover:bg-[#a39e87]/10"
+            className="border-primary text-primary hover:bg-primary/10"
             onClick={() => {
               document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
             }}

@@ -28,7 +28,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-primary transition-colors"
+                className="text-primary hover:text-primary/90 transition-colors"
               >
                 {link.name}
               </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-primary transition-colors"
+                  className="block px-3 py-2 text-primary hover:text-primary/90 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

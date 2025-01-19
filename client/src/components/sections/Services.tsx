@@ -33,6 +33,8 @@ export default function Services() {
           <p className="text-gray-400 max-w-2xl mx-auto">
             Premium grooming services tailored to your style. Each service includes
             a consultation to ensure we achieve your desired look.
+            <br />
+            Here are some of our most popular choices.
           </p>
         </div>
 

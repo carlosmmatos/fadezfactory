@@ -3,20 +3,20 @@ import { Scissors, Ruler, Sprout } from "lucide-react";
 
 const services = [
   {
-    title: "Classic Cut",
-    price: "$30",
-    description: "Traditional haircut with precision trimming and styling",
+    title: "Trim & Beard",
+    price: "$15",
+    description: "Keep your beard in top shape and line up any inconsistencies in your style",
     icon: Scissors,
   },
   {
-    title: "Fade & Design",
-    price: "$40",
-    description: "Custom fade with optional design work and line-up",
+    title: "Signature Fade",
+    price: "$35",
+    description: "The classic choice, talk to your barber to customize exactly how you want your cut",
     icon: Ruler,
   },
   {
     title: "Full Service",
-    price: "$50",
+    price: "$60",
     description: "Complete package including wash, cut, and premium styling",
     icon: Sprout,
   },
@@ -32,9 +32,7 @@ export default function Services() {
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Premium grooming services tailored to your style. Each service includes
-            a consultation to ensure we achieve your desired look.
-            <br />
-            Here are some of our most popular choices.
+            a consultation to ensure we achieve your desired look. Here are some of our most popular choices.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/assets/FadezPhotoBack.jpeg')",
+          backgroundImage: "url('/assets/FadePreview.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/70" />

@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 6rem; /* Add padding for fixed navbar */
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
   }
